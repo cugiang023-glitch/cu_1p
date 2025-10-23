@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>履歷 - AU114011126</title>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      --bg:#f4f7fb; --card:#ffffff; --accent:#0b63ff; --muted:#6b7280; --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#0f1724}
+    .wrap{max-width:900px; margin:36px auto; padding:28px;}
+    .card{display:grid; grid-template-columns: 1fr 320px; gap:24px; background:var(--card); border-radius:14px; padding:26px; box-shadow:0 6px 22px rgba(15,23,36,0.06)}
+    header{grid-column:1/-1; display:flex; justify-content:space-between; align-items:center}
+    .name{display:flex; gap:18px; align-items:center}
+    .avatar{width:86px; height:86px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#4aa3ff); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:26px}
+    h1{margin:0; font-size:20px}
+    p.role{margin:2px 0 0; color:var(--muted); font-size:13px}
+    .actions{display:flex; gap:8px; align-items:center}
+    .btn{background:var(--accent); color:white; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:600}
+    .btn.ghost{background:transparent; color:var(--accent); border:1px solid rgba(11,99,255,0.12)}
+
+    .left{padding:6px}
+    .section{margin-bottom:18px}
+    .section h3{margin:0 0 8px; font-size:13px; color:#0b1220}
+    .profile{font-size:14px; color:#111827}
+    .list-item{background:var(--glass); padding:10px; border-radius:10px; margin-bottom:10px}
+    .skill{display:inline-block; padding:6px 8px; border-radius:8px; background:#eef6ff; margin:6px 6px 0 0; font-size:13px}
+
+    .right{padding:6px; background:linear-gradient(180deg,#fafcff,#ffffff); border-radius:10px}
+    .meta{font-size:13px; color:var(--muted); margin-bottom:8px}
+    .contact a{display:block; color:#0b63ff; text-decoration:none; margin-bottom:6px}
+
+    footer{grid-column:1/-1; margin-top:8px; font-size:12px; color:var(--muted); text-align:right}
+
+    @media (max-width:880px){
+      .card{grid-template-columns: 1fr;}
+      .right{order:3}
+      header{flex-direction:column; align-items:flex-start; gap:12px}
+      footer{text-align:left}
+    }
+
+    @media print{
+      body{background:white}
+      .wrap{margin:0; padding:0}
+      .btn, .actions{display:none}
+      .card{box-shadow:none; border-radius:0}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+<div class="card" id="resume">
+<header>
+<div class="name">
+<div class="avatar" id="avatar">
+  <img src="images/b4180b6b-7d03-4588-bd2f-e005d5c4dcf2.jpeg" alt="Avatar" style="width:86px;height:86px;border-radius:12px;object-fit:cover;"/>
+</div>
+<div>
+<h1 id="fullName">江氏菊</h1>
+<p class="role">學號：<strong id="studentId">AU114011126</strong> ・ 應屆畢業生</p>
+<p class="role" id="location">台灣・城市</p>
+</div>
+</div>
+<div class="actions">
+<button class="btn" onclick="window.print()">列印 / 另存為 PDF</button>
+<button class="btn ghost" id="themeBtn">切換深色模式</button>
+</div>
+</header>
+<main>
+<section class="left">
+<div class="section">
+<h3>個人簡介</h3>
+<div class="list-item profile" id="summary">熱情且勤奮的學生，對學習與專案實作有高度興趣，擅長溝通與團隊合作。此處可放 2-3 句自我介紹。</div>
+<img alt="Campus Image" src="image/yardintro0.jpg" style="width:100%;border-radius:10px;margin-top:10px;"/></div>
+<div class="section">
+<h3>技能</h3>
+<div id="skills">
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Git</span>
+</div>
+</div>
+<div class="section">
+<h3>學歷</h3>
+<div class="list-item">
+<strong>某某大學 / 科系</strong>
+<div class="meta">2019 - 2023 （學士）</div>
+<div>主修重點、課程或專題：例如網頁設計、資料結構、演算法。</div>
+</div>
+</div>
+<div class="section">
+<h3>經歷</h3>
+<div class="list-item">
+<strong>實習 / 打工職稱 - 公司或單位</strong>
+<div class="meta">2022.06 - 2022.08</div>
+<div>工作內容與成就：例如協助製作網站、維護資料、與團隊合作完成專案。</div>
+</div>
+<div class="list-item">
+<strong>專案：個人作品或課程專題</strong>
+<div class="meta">使用技術：HTML / CSS / JS</div>
+<div>專案簡述：例如：設計一個可互動的履歷頁面，包含列印功能與主題切換。</div>
+</div>
+</div>
+</section>
+<aside class="right">
+<div class="section contact">
+<h3>聯絡資訊</h3>
+<div class="meta">（請替換為真實資訊）</div>
+<a href="#" id="email">you@example.com</a>
+<a href="#" id="phone">+886 9XX-XXX-XXX</a>
+<a href="#" id="linkedin">linkedin.com/in/yourname</a>
+<a href="#" id="github">github.com/yourname</a>
+</div>
+<div class="section">
+<h3>語言</h3>
+<div class="meta">越南語（母語）、英文（中等）</div>
+</div>
+<div class="section">
+<h3>獎項 / 證照</h3>
+<div class="list-item">例如：校內獎學金、證照名稱（TOEIC、證照號碼）</div>
+</div>
+</aside>
+</main>
+<footer>簡歷生成時間：<span id="now"></span></footer>
+</div>
+</div>
+<script>
+    const nowEl = document.getElementById('now');
+    const d = new Date();
+    nowEl.textContent = d.toLocaleDateString('zh-TW');
+
+    const themeBtn = document.getElementById('themeBtn');
+    let dark = false;
+    themeBtn.addEventListener('click', () => {
+      dark = !dark;
+      if(dark){
+        document.documentElement.style.setProperty('--bg','#0b1220');
+        document.documentElement.style.setProperty('--card','#071126');
+        document.documentElement.style.setProperty('--accent','#2dd4bf');
+        document.documentElement.style.setProperty('--muted','#9aa4b2');
+        document.body.style.color = '#ecfdf5';
+        themeBtn.textContent = '切換淺色模式';
+      } else {
+        document.documentElement.style.setProperty('--bg','#f4f7fb');
+        document.documentElement.style.setProperty('--card','#ffffff');
+        document.documentElement.style.setProperty('--accent','#0b63ff');
+        document.documentElement.style.setProperty('--muted','#6b7280');
+        document.body.style.color = '#0f1724';
+        themeBtn.textContent = '切換深色模式';
+      }
+    });
+
+    function fillFromQuery(){
+      const params = new URLSearchParams(location.search);
+      if(params.get('name')) document.getElementById('fullName').textContent = params.get('name');
+      if(params.get('email')) document.getElementById('email').textContent = params.get('email');
+      if(params.get('phone')) document.getElementById('phone').textContent = params.get('phone');
+      if(params.get('github')) document.getElementById('github').textContent = params.get('github');
+      if(params.get('linkedin')) document.getElementById('linkedin').textContent = params.get('linkedin');
+      if(params.get('summary')) document.getElementById('summary').textContent = params.get('summary');
+    }
+    fillFromQuery();
+
+    function exportJSON(){
+      const data = {
+        name: document.getElementById('fullName').textContent,
+        studentId: document.getElementById('studentId').textContent,
+        email: document.getElementById('email').textContent,
+        phone: document.getElementById('phone').textContent,
+      };
+      const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'resume_AU114011126.json';
+      a.click();
+    }
+
+    window.exportResumeJSON = exportJSON;
+  </script>
+</body>
+</html>
