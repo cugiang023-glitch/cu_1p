@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>學生履歷 - 健康產業管理｜AU114011126</title>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#f3fbf8; --card:#ffffff; --accent:#14b8a6; --accent-2:#60e0c9; --muted:#4b5563; --glass: rgba(20,184,166,0.06);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%; margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:#05252a}
+  .wrap{max-width:920px; margin:36px auto; padding:28px;}
+  .card{display:grid; grid-template-columns: 1fr 320px; gap:24px; background:var(--card); border-radius:14px; padding:26px; box-shadow:0 8px 30px rgba(5,37,42,0.06)}
+  header{grid-column:1/-1; display:flex; justify-content:space-between; align-items:center}
+  .name{display:flex; gap:18px; align-items:center}
+  .avatar{width:86px; height:86px; border-radius:14px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:26px; overflow:hidden}
+  .avatar img{width:100%; height:100%; object-fit:cover; display:block}
+  h1{margin:0; font-size:20px}
+  p.role{margin:2px 0 0; color:var(--muted); font-size:13px}
+  .actions{display:flex; gap:8px; align-items:center}
+  .btn{background:var(--accent); color:white; border:none; padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:600}
+  .btn.ghost{background:transparent; color:var(--accent); border:1px solid rgba(20,184,166,0.12)}
+
+  .left{padding:6px}
+  .section{margin-bottom:18px}
+  .section h3{margin:0 0 8px; font-size:13px; color:#05252a}
+  .profile{font-size:14px; color:#0b2f2f}
+  .list-item{background:var(--glass); padding:12px; border-radius:10px; margin-bottom:10px}
+  .skill{display:inline-block; padding:6px 8px; border-radius:999px; background:rgba(96,224,201,0.12); margin:6px 6px 0 0; font-size:13px; color:#05514b; border:1px solid rgba(20,184,166,0.12)}
+
+  .right{padding:10px; background:linear-gradient(180deg,#ffffff,#fbfffd); border-radius:10px}
+  .meta{font-size:13px; color:var(--muted); margin-bottom:8px}
+  .contact a{display:block; color:#0b6b62; text-decoration:none; margin-bottom:6px}
+
+  .illustration{width:100%; border-radius:10px; margin-top:10px; padding:12px; background:linear-gradient(90deg, rgba(96,224,201,0.06), rgba(20,184,166,0.03)); display:flex; align-items:center; justify-content:center; min-height:120px}
+
+  footer{grid-column:1/-1; margin-top:8px; font-size:12px; color:var(--muted); text-align:right}
+
+  @media (max-width:880px){
+    .card{grid-template-columns: 1fr;}
+    .right{order:3}
+    header{flex-direction:column; align-items:flex-start; gap:12px}
+    footer{text-align:left}
+  }
+
+  @media print{
+    body{background:white}
+    .wrap{margin:0; padding:0}
+    .btn, .actions{display:none}
+    .card{box-shadow:none; border-radius:0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card" id="resume">
+    <header>
+      <div class="name">
+        <div class="avatar" id="avatar">
+          <!-- If you have an avatar image uploaded, it will show here; otherwise initials -->
+          <img src="b4180b6b-7d03-4588-bd2f-e005d5c4dcf2.jpeg" alt="Avatar" onerror="this.style.display='none'; this.parentElement.textContent='AU'"/>
+        </div>
+        <div>
+          <h1 id="fullName">王小健</h1>
+          <p class="role">學號：<strong id="studentId">AU114011126</strong> ・ 健康產業管理系 一年級</p>
+          <p class="role" id="location">台灣・城市</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="window.print()">列印 / 另存為 PDF</button>
+        <button class="btn ghost" id="themeBtn">切換深色模式</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="left">
+        <div class="section">
+          <h3>個人簡介</h3>
+          <div class="list-item profile" id="summary">
+            我是健康產業管理系的一年級學生，熱愛研究健康促進、營養與運動科學，期望透過課程與實作了解產業運作與管理基礎。個性積極、擅長團隊合作，願意學習實務技能與參與校內外志工活動。
+          </div>
+          <div class="illustration" aria-hidden="true">
+            <!-- Simple inline SVG illustration (health + student) -->
+            <svg width="220" height="110" viewBox="0 0 220 110" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="健康插畫">
+              <rect x="0" y="0" width="220" height="110" rx="10" fill="white" opacity="0.0"/>
+              <g transform="translate(10,10)" fill="none" stroke="#14b8a6" stroke-width="2">
+                <path d="M10 70 C25 45, 55 45, 70 70" stroke-linecap="round"/>
+                <circle cx="90" cy="38" r="18" stroke-linecap="round"/>
+                <path d="M110 62 L140 62" stroke-linecap="round"/>
+                <path d="M135 42 L153 42" stroke-linecap="round"/>
+              </g>
+              <g transform="translate(120,10)">
+                <rect x="0" y="0" width="80" height="80" rx="8" fill="#e6fffa"/>
+                <path d="M20 30 L40 30 L40 20" stroke="#05514b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M40 20 L50 30" stroke="#05514b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="40" cy="50" r="10" stroke="#05514b" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>技能</h3>
+          <div id="skills">
+            <span class="skill">基礎健康評估</span>
+            <span class="skill">基礎急救(學習中)</span>
+            <span class="skill">資料整理 (Excel)</span>
+            <span class="skill">團隊協作</span>
+            <span class="skill">溝通與簡報</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>學歷</h3>
+          <div class="list-item">
+            <strong>某某大學 / 健康產業管理系</strong>
+            <div class="meta">2025 - 現在（學士班，一年級）</div>
+            <div>相關課程：健康促進概論、基礎營養學、運動與健康概論、醫療產業導論。</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>相關經歷（課外 / 校內）</h3>
+          <div class="list-item">
+            <strong>迎新志工・學生活動組</strong>
+            <div class="meta">2025.09</div>
+            <div>協助迎新活動流程與新生導覽，負責場地佈置與引導工作。</div>
+          </div>
+
+          <div class="list-item">
+            <strong>小組報告：健康促進企劃</strong>
+            <div class="meta">學期專題</div>
+            <div>參與小組設計社區健康促進活動，負責調查與簡報製作。</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="section contact">
+          <h3>聯絡資訊</h3>
+          <div class="meta">（請替換為真實資訊）</div>
+          <a href="mailto:you@example.com" id="email">you@example.com</a>
+          <a href="tel:+886900000000" id="phone">+886 9XX-XXX-XXX</a>
+          <a href="#" id="linkedin">linkedin.com/in/yourname</a>
+          <a href="#" id="github">github.com/yourname</a>
+        </div>
+
+        <div class="section">
+          <h3>語言</h3>
+          <div class="meta">中文（母語）、英文（基礎）</div>
+        </div>
+
+        <div class="section">
+          <h3>目標 / 自我期許</h3>
+          <div class="list-item">短期目標：熟悉健康產業管理基礎知識，參與實習與志工活動。長期目標：在健康促進或醫療管理領域找到實務職涯方向。</div>
+        </div>
+
+        <div class="section">
+          <h3>證照 / 活動</h3>
+          <div class="list-item">校園運動社成員、基礎急救課程（準備中）</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>簡歷生成時間：<span id="now"></span></footer>
+  </div>
+</div>
+
+<script>
+  const nowEl = document.getElementById('now');
+  const d = new Date();
+  nowEl.textContent = d.toLocaleDateString('zh-TW');
+
+  const themeBtn = document.getElementById('themeBtn');
+  let dark = false;
+  themeBtn.addEventListener('click', () => {
+    dark = !dark;
+    if(dark){
+      document.documentElement.style.setProperty('--bg','#05252a');
+      document.documentElement.style.setProperty('--card','#06282a');
+      document.documentElement.style.setProperty('--accent','#60e0c9');
+      document.documentElement.style.setProperty('--muted','#a7eae0');
+      document.body.style.color = '#e6fffb';
+      themeBtn.textContent = '切換淺色模式';
+    } else {
+      document.documentElement.style.setProperty('--bg','#f3fbf8');
+      document.documentElement.style.setProperty('--card','#ffffff');
+      document.documentElement.style.setProperty('--accent','#14b8a6');
+      document.documentElement.style.setProperty('--muted','#4b5563');
+      document.body.style.color = '#05252a';
+      themeBtn.textContent = '切換深色模式';
+    }
+  });
+
+  function fillFromQuery(){
+    const params = new URLSearchParams(location.search);
+    if(params.get('name')) document.getElementById('fullName').textContent = params.get('name');
+    if(params.get('email')) document.getElementById('email').textContent = params.get('email');
+    if(params.get('phone')) document.getElementById('phone').textContent = params.get('phone');
+    if(params.get('github')) document.getElementById('github').textContent = params.get('github');
+    if(params.get('linkedin')) document.getElementById('linkedin').textContent = params.get('linkedin');
+    if(params.get('summary')) document.getElementById('summary').textContent = params.get('summary');
+  }
+  fillFromQuery();
+
+  function exportJSON(){
+    const data = {
+      name: document.getElementById('fullName').textContent,
+      studentId: document.getElementById('studentId').textContent,
+      email: document.getElementById('email').textContent,
+      phone: document.getElementById('phone').textContent,
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'resume_AU114011126.json';
+    a.click();
+  }
+
+  window.exportResumeJSON = exportJSON;
+</script>
+</body>
+</html>
